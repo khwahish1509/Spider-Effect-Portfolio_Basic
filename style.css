@@ -302,3 +302,34 @@ section {
         width: 100%;
     }
 }
+
+.project-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #c691e6;
+    text-align: left; /* Keeps the text aligned to the left */
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 2px solid #c691e6; /* Cursor effect */
+    animation: typewriter 3s steps(30) 1s 1 normal both;
+}
+
+/* Ensure the animation repeats and behaves properly */
+.project-card h3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #c691e6;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    50% {
+        background-color: transparent;
+    }
+}
